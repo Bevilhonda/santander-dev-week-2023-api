@@ -5,7 +5,8 @@ import me.dio.domain.model.Feature;
 public record FeatureDto(Long id, String icon, String description) {
 
     public FeatureDto(Feature model) {
-        this(model.getId(), model.getIcon(), model.getDescription());
+        this(model.getId(), model.getIcon(),
+                model.getDescription());
     }
 
     public Feature toModel() {

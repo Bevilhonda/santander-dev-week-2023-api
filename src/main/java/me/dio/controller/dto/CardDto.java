@@ -7,7 +7,8 @@ import java.math.BigDecimal;
 public record CardDto(Long id, String number, BigDecimal limit) {
 
     public CardDto(Card model) {
-        this(model.getId(), model.getNumber(), model.getLimit());
+        this(model.getId(), model.getNumber(),
+                model.getLimit());
     }
 
     public Card toModel() {
